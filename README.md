@@ -1,4 +1,5 @@
-# qiyeguanlhoutaiApache 配置
+# 企业管理后台
+Apache 配置
 
 在project_root/.htaccess中添加URL重写规则：
 
