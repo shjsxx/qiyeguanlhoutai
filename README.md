@@ -1,1 +1,45 @@
-# qiyeguanlhoutai
+# qiyeguanlhoutaiApache 配置
+在project_root/.htaccess中添加URL重写规则：
+RewriteEngine On
+RewriteRule ^(.*)$ public/index.php [L]
+
+部署步骤
+将代码上传到服务器。
+配置config/database.php中的数据库连接信息。
+在MySQL中创建数据库并导入上述表结构。
+确保public/目录为Web服务器的根目录。
+
+
+
+project_root/
+│
+├── app/                    # 应用核心目录
+│   ├── controllers/        # 控制器目录
+│   │   ├── UserController.php
+│   │   ├── OrderController.php
+│   │   └── SystemController.php
+│   ├── models/             # 模型目录
+│   │   ├── User.php
+│   │   ├── Order.php
+│   │   └── OperationLog.php
+│   └── views/              # 视图目录
+│       ├── user/           # 用户视图
+│       │   ├── index.php
+│       │   └── create.php
+│       ├── order/          # 订单视图
+│       │   └── index.php
+│       └── system/         # 系统视图
+│           └── logs.php
+│
+├── config/                 # 配置文件目录
+│   ├── database.php        # 数据库配置
+│   └── routes.php          # 路由配置
+│
+├── public/                 # 公共资源目录
+│   ├── css/
+│   ├── js/
+│   └── index.php           # 系统入口文件
+│
+├── .htaccess               # Apache重写规则（可选）
+│
+└── composer.json           # Composer配置文件（可选）
