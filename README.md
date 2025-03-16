@@ -1,6 +1,9 @@
 # qiyeguanlhoutaiApache 配置
+
 在project_root/.htaccess中添加URL重写规则：
+
 RewriteEngine On
+
 RewriteRule ^(.*)$ public/index.php [L]
 
 部署步骤
